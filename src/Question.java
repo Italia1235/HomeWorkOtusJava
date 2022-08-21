@@ -19,7 +19,7 @@ public class Question {
         for(Answer answer : answers){
             System.out.println(answer.getText());
         }
-      int a =  new ConsoleUserInput().validatorAnswerUser(answers.length);
-        return a == right+1;
+      int resultAnswer =  new ConsoleUserInput().validatorAnswerUser(answers.length);
+        return resultAnswer == right+1;
     }
 }
