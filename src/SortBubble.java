@@ -1,23 +1,19 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 class SortBubble {
-    int temp;
-    boolean unsorted = true;
-    public void sort(int[] array) {
-        while(unsorted){
-            unsorted = false;
-            for (int i = 0; i < array.length-1; i++) {
-                if(array[i]>array[i+1]){
-                    temp = array[i];
-                    array[i] = array[i+1];
-                    array[i+1] = temp;
-                    unsorted = true;
+    public  List<Integer> sort(List<Integer> list) {
+        for (int i = 0; i < list.size()-1; i++) {
+            for (int j = 0; j < list.size()-1-i; j++) {
+                int a = list.get(j);
+                int b = list.get(j+1);
+                if (a > b) {
+                    list.set(j, b);
+                    list.set(j+1, a);
                 }
             }
         }
-
-    }
-    public void checkSort(int[] array) {
-        for (int number : array) {
-            System.out.println(number);
-        }
+        return list;
     }
 }
