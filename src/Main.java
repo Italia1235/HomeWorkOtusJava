@@ -1,7 +1,12 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
-        public static void main(String[] args) {
-            new Game().startGame();
+
+    public static void main(String[] args) {
+
+      new CompareSort().compareSort();
     }
+
+
 }
+
